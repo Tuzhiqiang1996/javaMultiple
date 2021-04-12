@@ -1,6 +1,7 @@
 package com.example.mapper;
 
 import com.example.annoation.DataSource;
+import com.example.common.lang.Result;
 import com.example.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.enums.DataSourceEnum;
@@ -14,5 +15,6 @@ import com.example.enums.DataSourceEnum;
  * @since 2021-01-29
  */
 public interface UserMapper extends BaseMapper<User> {
+
 
 }

@@ -32,7 +32,8 @@ import java.util.Map;
  */
 @Configuration
 @EnableTransactionManagement
-@MapperScan("com.example.mapper*")
+//@MapperScan("com.example.mapper*")
+@MapperScan({"com.example.mapper*"})
 public class MybatisPlusConfig {
     @Bean
     public PaginationInterceptor paginationInterceptor() {

@@ -12,6 +12,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.enums.DataSourceEnum;
 import com.example.service.BlogService;
 import com.example.util.ShiroUtil;
+import freemarker.core.ReturnInstruction;
 import lombok.Data;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,10 +37,16 @@ import java.util.List;
  */
 @Data
 @RestController
+@RequestMapping("/user")
 public class BlogController {
     @Autowired
     BlogService blogService;
 
+    @RequestMapping("/getAllUser")
+    @ResponseBody
+        public Result ztu(){
+            return Result.succ("");
+        }
     @DataSource(DataSourceEnum.DB1)
     @GetMapping("/blogs")
     public Result blogs(Integer currentPage) {

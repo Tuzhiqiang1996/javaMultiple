@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Slf4j
 @Aspect
-@Order(-1)
+@Order(-100)
 public class DataSourceAspect {
 
     private static Logger logger = LoggerFactory.getLogger(DataSourceAspect.class);
