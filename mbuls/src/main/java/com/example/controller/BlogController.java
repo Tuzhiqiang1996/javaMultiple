@@ -37,16 +37,11 @@ import java.util.List;
  */
 @Data
 @RestController
-@RequestMapping("/user")
 public class BlogController {
     @Autowired
     BlogService blogService;
 
-    @RequestMapping("/getAllUser")
-    @ResponseBody
-        public Result ztu(){
-            return Result.succ("");
-        }
+
     @DataSource(DataSourceEnum.DB1)
     @GetMapping("/blogs")
     public Result blogs(Integer currentPage) {
